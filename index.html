@@ -10,105 +10,91 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#000;color:#f5f5f7;overflow-x:hidden;}
-
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,0.75);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:0.5px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:52px;}
-.nav-logo{font-size:12px;font-weight:600;letter-spacing:0.5px;color:#f5f5f7;}
+.nav-logo{font-size:12px;font-weight:600;letter-spacing:0.5px;}
 .nav-links{display:flex;gap:24px;}
-.nav-links a{font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s;}
+.nav-links a{font-size:12px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:#fff;}
 .nav-live{display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,0.4);}
 .live-dot{width:6px;height:6px;border-radius:50%;background:#30d158;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
-
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 50% 40%,#0a2a18 0%,#000 70%);}
-.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#30d158;margin-bottom:20px;position:relative;opacity:0;animation:fadeUp 0.8s 0.2s forwards;}
-.hero-title{font-size:clamp(42px,10vw,80px);font-weight:700;line-height:1.05;letter-spacing:-2px;background:linear-gradient(180deg,#fff 55%,rgba(255,255,255,0.35));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;position:relative;opacity:0;animation:fadeUp 0.8s 0.35s forwards;}
-.hero-sub{font-size:17px;font-weight:300;color:rgba(255,255,255,0.5);max-width:480px;line-height:1.6;margin-bottom:48px;position:relative;opacity:0;animation:fadeUp 0.8s 0.5s forwards;}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;opacity:0;animation:fadeUp 0.8s 0.65s forwards;}
-.btn-w{padding:13px 26px;border-radius:980px;background:#fff;color:#000;font-size:15px;font-weight:500;border:none;cursor:pointer;transition:transform 0.15s,background 0.15s;}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#30d158;margin-bottom:20px;position:relative;opacity:0;animation:fadeUp .8s .2s forwards;}
+.hero-title{font-size:clamp(42px,10vw,80px);font-weight:700;line-height:1.05;letter-spacing:-2px;background:linear-gradient(180deg,#fff 55%,rgba(255,255,255,.35));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;position:relative;opacity:0;animation:fadeUp .8s .35s forwards;}
+.hero-sub{font-size:17px;font-weight:300;color:rgba(255,255,255,.5);max-width:480px;line-height:1.6;margin-bottom:48px;position:relative;opacity:0;animation:fadeUp .8s .5s forwards;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;opacity:0;animation:fadeUp .8s .65s forwards;}
+.btn-w{padding:13px 26px;border-radius:980px;background:#fff;color:#000;font-size:15px;font-weight:500;border:none;cursor:pointer;transition:transform .15s,background .15s;}
 .btn-w:hover{background:#e5e5e5;transform:scale(1.02);}
-.btn-b{padding:13px 26px;border-radius:980px;background:transparent;color:#2997ff;font-size:15px;font-weight:400;border:none;cursor:pointer;transition:color 0.2s;}
-.btn-b:hover{color:#67b8ff;}
-
+.btn-b{padding:13px 26px;border-radius:980px;background:transparent;color:#2997ff;font-size:15px;font-weight:400;border:none;cursor:pointer;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
-
 .strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:0.5px solid #1a1a1a;}
 @media(max-width:600px){.strip{grid-template-columns:repeat(2,1fr);}}
 .strip-cell{background:#0a0a0a;padding:32px 20px;text-align:center;border-right:0.5px solid #1a1a1a;border-bottom:0.5px solid #1a1a1a;}
-.strip-cell:nth-child(2n){border-right:0.5px solid #1a1a1a;}
-@media(min-width:601px){.strip-cell:last-child{border-right:none;}}
-.strip-num{font-size:clamp(28px,6vw,44px);font-weight:700;letter-spacing:-1.5px;line-height:1;margin-bottom:6px;}
-.strip-label{font-size:11px;color:rgba(255,255,255,0.35);font-weight:400;}
-
+.strip-num{font-size:clamp(26px,5vw,42px);font-weight:700;letter-spacing:-1.5px;line-height:1;margin-bottom:6px;}
+.strip-label{font-size:11px;color:rgba(255,255,255,.35);}
 .section{padding:80px 24px;max-width:960px;margin:0 auto;}
 .eyebrow{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#2997ff;margin-bottom:12px;}
 .s-title{font-size:clamp(28px,5vw,48px);font-weight:700;letter-spacing:-1.5px;line-height:1.05;color:#f5f5f7;margin-bottom:12px;}
-.s-sub{font-size:16px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.6;max-width:440px;}
-
+.s-sub{font-size:16px;color:rgba(255,255,255,.4);font-weight:300;line-height:1.6;max-width:440px;}
 .equip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:48px;border-radius:20px;overflow:hidden;}
 @media(max-width:700px){.equip-grid{grid-template-columns:repeat(2,1fr);}}
-.eq-card{background:#0f0f0f;padding:24px 18px;transition:background 0.2s;}
+.eq-card{background:#0f0f0f;padding:24px 18px;transition:background .2s;}
 .eq-card:hover{background:#161616;}
-.eq-name{font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:12px;line-height:1.4;}
+.eq-name{font-size:11px;color:rgba(255,255,255,.4);margin-bottom:12px;line-height:1.4;}
 .eq-nums{display:flex;align-items:baseline;gap:4px;margin-bottom:10px;}
 .eq-fact{font-size:30px;font-weight:700;letter-spacing:-1px;}
-.eq-plan{font-size:13px;color:rgba(255,255,255,0.25);}
+.eq-plan{font-size:13px;color:rgba(255,255,255,.25);}
 .eq-bar{height:3px;background:#1e1e1e;border-radius:2px;overflow:hidden;margin-bottom:7px;}
 .eq-fill{height:100%;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);}
 .eq-pct{font-size:11px;font-weight:600;}
-
 .chart-block{background:#080808;border-top:0.5px solid #161616;border-bottom:0.5px solid #161616;padding:70px 24px;}
 .chart-inner{max-width:960px;margin:0 auto;}
 .chart-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;gap:16px;flex-wrap:wrap;}
 .tabs{display:flex;gap:2px;background:#141414;border-radius:10px;padding:3px;}
-.tab{padding:6px 16px;border-radius:8px;font-size:12px;font-weight:500;cursor:pointer;color:rgba(255,255,255,0.35);border:none;background:transparent;transition:all 0.2s;}
+.tab{padding:6px 16px;border-radius:8px;font-size:12px;font-weight:500;cursor:pointer;color:rgba(255,255,255,.35);border:none;background:transparent;transition:all .2s;}
 .tab.on{background:#222;color:#fff;}
 .bars{display:flex;align-items:flex-end;gap:6px;height:160px;}
 .bg{flex:1;display:flex;flex-direction:column;align-items:center;}
 .bv{font-size:10px;font-weight:600;margin-bottom:4px;min-height:14px;}
-.bw{width:100%;display:flex;align-items:flex-end;justify-content:center;height:120px;gap:3px;}
-.bp{border-radius:4px 4px 0 0;background:#1c1c1c;width:55%;}
-.bf{border-radius:4px 4px 0 0;width:55%;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);}
-.bl{font-size:9px;color:rgba(255,255,255,0.25);margin-top:6px;}
-.bd{font-size:8px;color:rgba(255,255,255,0.15);}
+.bw{width:100%;display:flex;align-items:flex-end;justify-content:center;height:120px;gap:2px;}
+.bp{border-radius:4px 4px 0 0;background:#1c1c1c;}
+.bf{border-radius:4px 4px 0 0;height:0;transition:height 1s cubic-bezier(.4,0,.2,1);}
+.bl{font-size:9px;color:rgba(255,255,255,.25);margin-top:6px;}
+.bd{font-size:8px;color:rgba(255,255,255,.15);}
 .leg{display:flex;gap:16px;margin-top:22px;flex-wrap:wrap;}
-.leg span{display:flex;align-items:center;gap:5px;font-size:10px;color:rgba(255,255,255,0.3);}
+.leg span{display:flex;align-items:center;gap:5px;font-size:10px;color:rgba(255,255,255,.3);}
 .lsq{width:8px;height:8px;border-radius:2px;display:inline-block;}
-
 .costs-section{padding:80px 24px;max-width:960px;margin:0 auto;}
 .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:20px 20px 0 0;overflow:hidden;margin-top:48px;}
 @media(max-width:500px){.metrics{grid-template-columns:1fr;}}
 .mc{background:#0f0f0f;padding:28px 22px;}
-.mc-label{font-size:11px;color:rgba(255,255,255,0.3);margin-bottom:6px;}
-.mc-val{font-size:clamp(22px,4vw,32px);font-weight:700;letter-spacing:-1px;color:#2997ff;}
-.mc-sub{font-size:11px;color:rgba(255,255,255,0.25);margin-top:3px;}
+.mc-label{font-size:11px;color:rgba(255,255,255,.3);margin-bottom:6px;}
+.mc-val{font-size:clamp(18px,3.5vw,28px);font-weight:700;letter-spacing:-1px;color:#2997ff;}
+.mc-sub{font-size:11px;color:rgba(255,255,255,.25);margin-top:3px;}
 .cost-list{background:#0f0f0f;border-radius:0 0 20px 20px;padding:24px 22px;margin-bottom:2px;}
-.crow{display:flex;justify-content:space-between;align-items:flex-start;padding:11px 0;border-bottom:0.5px solid #181818;}
+.crow{display:flex;justify-content:space-between;align-items:flex-start;padding:11px 0;border-bottom:0.5px solid #181818;gap:12px;}
 .crow:last-child{border-bottom:none;}
-.cn{font-size:13px;color:rgba(255,255,255,0.75);}
-.cs{font-size:10px;color:rgba(255,255,255,0.25);margin-top:2px;}
-.cbar{height:2px;background:#181818;border-radius:2px;margin-top:7px;overflow:hidden;width:140px;}
+.cn{font-size:13px;color:rgba(255,255,255,.75);}
+.cs{font-size:10px;color:rgba(255,255,255,.25);margin-top:2px;}
+.cbar{height:2px;background:#181818;border-radius:2px;margin-top:7px;overflow:hidden;width:120px;}
 .cbf{height:100%;background:#2997ff;border-radius:2px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1);}
 .cv{font-size:13px;font-weight:600;color:#2997ff;text-align:right;white-space:nowrap;}
-.cpct{font-size:10px;color:rgba(255,255,255,0.25);text-align:right;}
-
+.cpct{font-size:10px;color:rgba(255,255,255,.25);text-align:right;}
 .utt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:2px;border-radius:20px;overflow:hidden;}
 @media(max-width:600px){.utt-grid{grid-template-columns:1fr;}}
 .uc{background:#0f0f0f;padding:24px 20px;}
-.uc-name{font-size:11px;color:rgba(255,255,255,0.3);margin-bottom:8px;}
-.uc-val{font-size:clamp(16px,3vw,22px);font-weight:700;color:#2997ff;letter-spacing:-0.5px;}
-.uc-hrs{font-size:11px;color:rgba(255,255,255,0.25);margin-top:4px;}
-
+.uc-name{font-size:11px;color:rgba(255,255,255,.3);margin-bottom:8px;}
+.uc-val{font-size:clamp(14px,3vw,20px);font-weight:700;color:#2997ff;letter-spacing:-0.5px;}
+.uc-hrs{font-size:11px;color:rgba(255,255,255,.25);margin-top:4px;}
 footer{background:#000;border-top:0.5px solid #141414;padding:32px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-.fl,.fr{font-size:11px;color:rgba(255,255,255,0.25);}
+.fl,.fr{font-size:11px;color:rgba(255,255,255,.25);}
 .fr a{color:#2997ff;text-decoration:none;}
-
-.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.show{opacity:1;transform:translateY(0);}
-.reveal.delay1{transition-delay:0.1s;}
-.reveal.delay2{transition-delay:0.2s;}
-.reveal.delay3{transition-delay:0.3s;}
+.reveal.delay1{transition-delay:.1s;}
+.reveal.delay2{transition-delay:.2s;}
+.reveal.delay3{transition-delay:.3s;}
 </style>
 </head>
 <body>
@@ -120,14 +106,14 @@ footer{background:#000;border-top:0.5px solid #141414;padding:32px 24px;display:
     <a href="#dynamics">График</a>
     <a href="#costs">Затраты</a>
   </div>
-  <div class="nav-live"><div class="live-dot"></div><span id="nav-time">обновлено...</span></div>
+  <div class="nav-live"><div class="live-dot"></div>22.06.26 · 13:25</div>
 </nav>
 
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-eyebrow">Земляные работы · нед. 26</div>
   <h1 class="hero-title">Строительство<br>гольф-поля</h1>
-  <p class="hero-sub">Оперативный мониторинг спецтехники и выполнения плана</p>
+  <p class="hero-sub">Оперативный мониторинг спецтехники · 22.06–28.06.2026</p>
   <div class="hero-btns">
     <button class="btn-w" onclick="document.getElementById('status').scrollIntoView({behavior:'smooth'})">Смотреть отчёт</button>
     <button class="btn-b">@almetgolf_transport_bot ›</button>
@@ -136,11 +122,11 @@ footer{background:#000;border-top:0.5px solid #141414;padding:32px 24px;display:
 
 <div class="strip">
   <div class="strip-cell reveal">
-    <div class="strip-num" style="color:#ffd60a;" id="cnt-pct">0%</div>
+    <div class="strip-num" style="color:#fff;" id="cnt-pct">0%</div>
     <div class="strip-label">выполнение плана</div>
   </div>
   <div class="strip-cell reveal delay1">
-    <div class="strip-num" style="color:#30d158;">15<span style="font-size:18px;color:rgba(255,255,255,0.2);font-weight:400;"> / 24</span></div>
+    <div class="strip-num" style="color:#30d158;">0<span style="font-size:18px;color:rgba(255,255,255,.2);font-weight:400;"> / 24</span></div>
     <div class="strip-label">единиц · факт / план</div>
   </div>
   <div class="strip-cell reveal delay2">
@@ -148,66 +134,52 @@ footer{background:#000;border-top:0.5px solid #141414;padding:32px 24px;display:
     <div class="strip-label">часов отработано</div>
   </div>
   <div class="strip-cell reveal delay3">
-    <div class="strip-num" style="color:#fff;font-size:clamp(18px,4vw,28px);">2,95 млн ₽</div>
+    <div class="strip-num" style="color:#fff;font-size:clamp(16px,3.5vw,26px);">2 948 611 ₽</div>
     <div class="strip-label">затраты за май 2026</div>
   </div>
 </div>
 
 <section class="section" id="status">
-  <div class="reveal"><div class="eyebrow">Статус · 20 июня 2026</div></div>
+  <div class="reveal"><div class="eyebrow">Статус · 22 июня 2026</div></div>
   <div class="reveal delay1"><h2 class="s-title">Наличие техники</h2></div>
   <div class="reveal delay2"><p class="s-sub">Факт и план по каждой единице спецтехники на объекте</p></div>
-
   <div class="equip-grid reveal delay3">
     <div class="eq-card">
-      <div class="eq-name">КАМАЗ самосвал 13т</div>
-      <div class="eq-nums"><span class="eq-fact" style="color:#ff453a;">7</span><span class="eq-plan">/ 15 ед.</span></div>
-      <div class="eq-bar"><div class="eq-fill" data-w="47" style="background:#ff453a;"></div></div>
-      <div class="eq-pct" style="color:#ff453a;">47% плана</div>
+      <div class="eq-name">Бульдозер ДСТ-Урал D12</div>
+      <div class="eq-nums"><span class="eq-fact" style="color:#555;">0</span><span class="eq-plan">&nbsp;/ 2 ед.</span></div>
+      <div class="eq-bar"><div class="eq-fill" data-w="0" style="background:#555;"></div></div>
+      <div class="eq-pct" style="color:#555;">0% плана</div>
     </div>
     <div class="eq-card">
-      <div class="eq-name">Бульдозер ДСТ Урал Д14</div>
-      <div class="eq-nums"><span class="eq-fact" style="color:#30d158;">2</span><span class="eq-plan">/ 2 ед.</span></div>
-      <div class="eq-bar"><div class="eq-fill" data-w="100" style="background:#30d158;"></div></div>
-      <div class="eq-pct" style="color:#30d158;">100% плана</div>
-    </div>
-    <div class="eq-card">
-      <div class="eq-name">Бульдозер CAT D3</div>
-      <div class="eq-nums"><span class="eq-fact" style="color:#30d158;">1</span><span class="eq-plan">/ 1 ед.</span></div>
-      <div class="eq-bar"><div class="eq-fill" data-w="100" style="background:#30d158;"></div></div>
-      <div class="eq-pct" style="color:#30d158;">100% плана</div>
+      <div class="eq-name">КАМАЗ самосвал 13 т</div>
+      <div class="eq-nums"><span class="eq-fact" style="color:#555;">0</span><span class="eq-plan">&nbsp;/ 15 ед.</span></div>
+      <div class="eq-bar"><div class="eq-fill" data-w="0" style="background:#555;"></div></div>
+      <div class="eq-pct" style="color:#555;">0% плана</div>
     </div>
     <div class="eq-card">
       <div class="eq-name">Экскаватор гусеничный</div>
-      <div class="eq-nums"><span class="eq-fact" style="color:#30d158;">2</span><span class="eq-plan">/ 2 ед.</span></div>
-      <div class="eq-bar"><div class="eq-fill" data-w="100" style="background:#30d158;"></div></div>
-      <div class="eq-pct" style="color:#30d158;">100% плана</div>
+      <div class="eq-nums"><span class="eq-fact" style="color:#555;">0</span><span class="eq-plan">&nbsp;/ 3 ед.</span></div>
+      <div class="eq-bar"><div class="eq-fill" data-w="0" style="background:#555;"></div></div>
+      <div class="eq-pct" style="color:#555;">0% плана</div>
     </div>
     <div class="eq-card">
       <div class="eq-name">Экскаватор-погрузчик</div>
-      <div class="eq-nums"><span class="eq-fact" style="color:#30d158;">1</span><span class="eq-plan">/ 1 ед.</span></div>
-      <div class="eq-bar"><div class="eq-fill" data-w="100" style="background:#30d158;"></div></div>
-      <div class="eq-pct" style="color:#30d158;">100% плана</div>
-    </div>
-    <div class="eq-card">
-      <div class="eq-name">Кран 50 т</div>
-      <div class="eq-nums"><span class="eq-fact" style="color:#30d158;">1</span><span class="eq-plan">/ 1 ед.</span></div>
-      <div class="eq-bar"><div class="eq-fill" data-w="100" style="background:#30d158;"></div></div>
-      <div class="eq-pct" style="color:#30d158;">100% плана</div>
+      <div class="eq-nums"><span class="eq-fact" style="color:#555;">0</span><span class="eq-plan">&nbsp;/ 2 ед.</span></div>
+      <div class="eq-bar"><div class="eq-fill" data-w="0" style="background:#555;"></div></div>
+      <div class="eq-pct" style="color:#555;">0% плана</div>
     </div>
     <div class="eq-card">
       <div class="eq-name">Грунтовый каток 16 т</div>
-      <div class="eq-nums"><span class="eq-fact" style="color:#30d158;">1</span><span class="eq-plan">/ 1 ед.</span></div>
-      <div class="eq-bar"><div class="eq-fill" data-w="100" style="background:#30d158;"></div></div>
-      <div class="eq-pct" style="color:#30d158;">100% плана</div>
+      <div class="eq-nums"><span class="eq-fact" style="color:#555;">0</span><span class="eq-plan">&nbsp;/ 1 ед.</span></div>
+      <div class="eq-bar"><div class="eq-fill" data-w="0" style="background:#555;"></div></div>
+      <div class="eq-pct" style="color:#555;">0% плана</div>
     </div>
     <div class="eq-card">
       <div class="eq-name">Каток асфальтный 3 т</div>
-      <div class="eq-nums"><span class="eq-fact" style="color:#ff453a;">0</span><span class="eq-plan">/ 1 ед.</span></div>
-      <div class="eq-bar"><div class="eq-fill" data-w="0" style="background:#ff453a;"></div></div>
-      <div class="eq-pct" style="color:#ff453a;">0% плана</div>
-    </div>
-  </div>
+      <div class="eq-nums"><span class="eq-fact" style="color:#555;">0</span><span class="eq-plan">&nbsp;/ 1 ед.</span></div>
+      <div class="eq-bar"><div class="eq-fill" data-w="0" style="background:#555;"></div></div>
+      <div class="eq-pct" style="color:#555;">0% плана</div>
+    </div></div>
 </section>
 
 <div class="chart-block" id="dynamics">
@@ -238,56 +210,64 @@ footer{background:#000;border-top:0.5px solid #141414;padding:32px 24px;display:
 </div>
 
 <section class="costs-section" id="costs">
-  <div class="reveal"><div class="eyebrow">Затраты · май 2026</div></div>
+  <div class="reveal"><div class="eyebrow">Затраты · Май 2026</div></div>
   <div class="reveal delay1"><h2 class="s-title">Финансы</h2></div>
   <div class="reveal delay2"><p class="s-sub">По видам техники и подрядчикам УТТ</p></div>
-
+  
   <div class="metrics reveal delay3">
-    <div class="mc">
-      <div class="mc-label">Итого без НДС</div>
-      <div class="mc-val">2 948 612 ₽</div>
-      <div class="mc-sub">май 2026</div>
-    </div>
-    <div class="mc">
-      <div class="mc-label">Часов отработано</div>
-      <div class="mc-val">1 286 ч</div>
-      <div class="mc-sub">за месяц</div>
-    </div>
-    <div class="mc">
-      <div class="mc-label">Средняя ставка</div>
-      <div class="mc-val">2 293 ₽/ч</div>
-      <div class="mc-sub">без НДС</div>
-    </div>
+    <div class="mc"><div class="mc-label">Итого без НДС</div><div class="mc-val">2 948 611 ₽</div><div class="mc-sub">Май 2026</div></div>
+    <div class="mc"><div class="mc-label">Часов отработано</div><div class="mc-val">1286 ч</div><div class="mc-sub">за месяц</div></div>
+    <div class="mc"><div class="mc-label">Средняя ставка</div><div class="mc-val">2 291 ₽/ч</div><div class="mc-sub">без НДС</div></div>
   </div>
-
   <div class="cost-list reveal">
     <div class="crow">
-      <div><div class="cn">КАМАЗ самосвал</div><div class="cs">773 ч · 84 рейса</div><div class="cbar"><div class="cbf" data-w="48"></div></div></div>
-      <div><div class="cv">1 426 055 ₽</div><div class="cpct">48%</div></div>
+      <div>
+        <div class="cn">КАМАЗ самосвал 13 т</div>
+        <div class="cs">777 ч · 85 рейсов</div>
+        <div class="cbar"><div class="cbf" data-w="49"></div></div>
+      </div>
+      <div><div class="cv">1 432 831 ₽</div><div class="cpct">49%</div></div>
     </div>
     <div class="crow">
-      <div><div class="cn">Бульдозер ДСТ Урал Д14</div><div class="cs">331 ч · 34 рейса</div><div class="cbar"><div class="cbf" data-w="35"></div></div></div>
-      <div><div class="cv">1 019 408 ₽</div><div class="cpct">35%</div></div>
+      <div>
+        <div class="cn">Бульдозер ДСТ-Урал D12</div>
+        <div class="cs">331 ч · 34 рейсов</div>
+        <div class="cbar"><div class="cbf" data-w="35"></div></div>
+      </div>
+      <div><div class="cv">1 019 408 ₽</div><div class="cpct">35%</div></div>
     </div>
     <div class="crow">
-      <div><div class="cn">Экс-погрузчик Cukurova</div><div class="cs">84 ч · 9 рейсов</div><div class="cbar"><div class="cbf" data-w="8"></div></div></div>
-      <div><div class="cv">226 251 ₽</div><div class="cpct">8%</div></div>
+      <div>
+        <div class="cn">Экскаватор-погрузчик</div>
+        <div class="cs">124 ч · 14 рейсов</div>
+        <div class="cbar"><div class="cbf" data-w="11"></div></div>
+      </div>
+      <div><div class="cv">332 940 ₽</div><div class="cpct">11%</div></div>
     </div>
     <div class="crow">
-      <div><div class="cn">Экскаватор Liebherr</div><div class="cs">54 ч · 6 рейсов</div><div class="cbar"><div class="cbf" data-w="6"></div></div></div>
-      <div><div class="cv">163 432 ₽</div><div class="cpct">6%</div></div>
-    </div>
-    <div class="crow">
-      <div><div class="cn">Прочая техника</div><div class="cs">44 ч · 6 рейсов</div><div class="cbar"><div class="cbf" data-w="4"></div></div></div>
-      <div><div class="cv">113 466 ₽</div><div class="cpct">4%</div></div>
-    </div>
-  </div>
-
+      <div>
+        <div class="cn">Экскаватор гусеничный</div>
+        <div class="cs">54 ч · 6 рейсов</div>
+        <div class="cbar"><div class="cbf" data-w="6"></div></div>
+      </div>
+      <div><div class="cv">163 432 ₽</div><div class="cpct">6%</div></div>
+    </div></div>
   <div class="utt-grid reveal">
-    <div class="uc"><div class="uc-name">Ямашское УТТ</div><div class="uc-val">2 181 778 ₽</div><div class="uc-hrs">981 ч</div></div>
-    <div class="uc"><div class="uc-name">Альметьевское УТТ-1</div><div class="uc-val">619 612 ₽</div><div class="uc-hrs">221 ч</div></div>
-    <div class="uc"><div class="uc-name">Азнакаевское УТТ</div><div class="uc-val">147 221 ₽</div><div class="uc-hrs">85 ч</div></div>
-  </div>
+    <div class="uc">
+      <div class="uc-name">Ямашское УТТ</div>
+      <div class="uc-val">2 181 778 ₽</div>
+      <div class="uc-hrs">980 ч</div>
+    </div>
+    <div class="uc">
+      <div class="uc-name">Альметьевское УТТ-1</div>
+      <div class="uc-val">619 612 ₽</div>
+      <div class="uc-hrs">221 ч</div>
+    </div>
+    <div class="uc">
+      <div class="uc-name">Азнакаевское УТТ</div>
+      <div class="uc-val">147 221 ₽</div>
+      <div class="uc-hrs">84 ч</div>
+    </div></div>
 </section>
 
 <footer>
@@ -296,31 +276,23 @@ footer{background:#000;border-top:0.5px solid #141414;padding:32px 24px;display:
 </footer>
 
 <script>
-const weekData=[
-  {day:'пн',date:'15.06',plan:20,fact:12},
-  {day:'вт',date:'16.06',plan:20,fact:12},
-  {day:'ср',date:'17.06',plan:20,fact:14},
-  {day:'чт',date:'18.06',plan:20,fact:13},
-  {day:'пт',date:'19.06',plan:20,fact:0},
-  {day:'сб',date:'20.06',plan:20,fact:15},
-  {day:'вс',date:'21.06',plan:20,fact:0},
-];
-const monthData=[
-  {label:'апрель',plan:20,fact:1},
-  {label:'май',plan:20,fact:5},
-  {label:'июнь',plan:24,fact:15},
-];
+const WEEK_DATA=[{"day": "", "date": "", "plan": 0.0, "fact": 0.0}, {"day": "", "date": "", "plan": 0.0, "fact": 0.0}, {"day": "", "date": "", "plan": 0.0, "fact": 0.0}, {"day": "", "date": "", "plan": 0.0, "fact": 0.0}, {"day": "", "date": "", "plan": 0.0, "fact": 0.0}, {"day": "", "date": "", "plan": 0.0, "fact": 0.0}, {"day": "", "date": "", "plan": 0.0, "fact": 0.0}];
+const MONTH_DATA=[{"label": "апр", "plan": 0.0, "fact": 0.0}, {"label": "май", "plan": 0.0, "fact": 0.0}, {"label": "июн", "plan": 0.0, "fact": 0.0}];
+const TOTAL_PCT=0;
+const TOTAL_HRS=0;
 
-function col(f,p){if(!f)return null;const r=f/p*100;return r>=90?'#30d158':r>=70?'#ffd60a':'#ff453a';}
+function col(f,p){if(!f||!p)return null;const r=f/p*100;return r>=90?'#30d158':r>=70?'#ffd60a':'#ff453a';}
 
-function renderBars(data,elId,maxVal){
+function renderBars(data,elId){
   const el=document.getElementById(elId);
+  if(!el)return;
+  const maxVal=Math.max(...data.map(d=>Math.max(d.plan||0,d.fact||0)),1);
   const maxH=110;
   el.innerHTML=data.map(d=>{
     const pV=d.plan||0,fV=d.fact||0;
     const pH=Math.round(pV/maxVal*maxH);
     const fH=fV?Math.round(fV/maxVal*maxH):0;
-    const remH=pH-fH;
+    const remH=Math.max(pH-fH,0);
     const c=col(fV,pV);
     const pct=fV?Math.round(fV/pV*100)+'%':'—';
     const pc=c||'rgba(255,255,255,0.2)';
@@ -328,7 +300,7 @@ function renderBars(data,elId,maxVal){
       <div class="bv" style="color:${pc}">${pct}</div>
       <div class="bw">
         <div style="display:flex;flex-direction:column;align-items:center;width:58%;justify-content:flex-end;height:${maxH}px;">
-          ${c?`<div class="bf" data-h="${fH}" style="background:${c};width:100%;border-radius:4px 4px 0 0;"></div>`:''}
+          ${c?`<div class="bf" data-h="${fH}" style="background:${c};width:100%;"></div>`:''}
           <div class="bp" style="height:${remH>0?remH:(!fV?pH:0)}px;width:100%;border-radius:${!fV?'4px 4px 0 0':'0'};"></div>
         </div>
       </div>
@@ -338,15 +310,29 @@ function renderBars(data,elId,maxVal){
   }).join('');
 }
 
-renderBars(weekData,'bars-week',24);
-renderBars(monthData,'bars-months',24);
+function animateBars(container){
+  if(!container)return;
+  container.querySelectorAll('.bf[data-h]').forEach(el=>{
+    const h=parseInt(el.dataset.h)||0;
+    el.style.height='0px';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{el.style.height=h+'px';}));
+  });
+}
 
-function setView(v,btn){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
-  btn.classList.add('on');
-  document.getElementById('view-week').style.display=v==='week'?'':'none';
-  document.getElementById('view-months').style.display=v==='months'?'':'none';
-  if(v==='months') animateBars(document.getElementById('bars-months'));
+function animateEqBars(){
+  document.querySelectorAll('.eq-fill[data-w]').forEach(el=>{
+    const w=parseInt(el.dataset.w)||0;
+    el.style.width='0%';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{el.style.width=w+'%';}));
+  });
+}
+
+function animateCostBars(){
+  document.querySelectorAll('.cbf[data-w]').forEach(el=>{
+    const w=parseInt(el.dataset.w)||0;
+    el.style.width='0%';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{el.style.width=w+'%';}));
+  });
 }
 
 function animateCounter(el,target,suffix,dur){
@@ -360,52 +346,37 @@ function animateCounter(el,target,suffix,dur){
   requestAnimationFrame(step);
 }
 
-function animateBars(container){
-  container.querySelectorAll('.bf[data-h]').forEach(el=>{
-    const h=parseInt(el.dataset.h)||0;
-    el.style.height='0px';
-    setTimeout(()=>{el.style.height=h+'px';},50);
-  });
+function setView(v,btn){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  btn.classList.add('on');
+  const wk=document.getElementById('view-week');
+  const mn=document.getElementById('view-months');
+  wk.style.display=v==='week'?'':'none';
+  mn.style.display=v==='months'?'':'none';
+  if(v==='months'){
+    mn.classList.add('show');
+    setTimeout(()=>animateBars(mn),50);
+  }
 }
 
-function animateEqBars(container){
-  container.querySelectorAll('.eq-fill[data-w]').forEach(el=>{
-    const w=parseInt(el.dataset.w)||0;
-    el.style.width='0%';
-    setTimeout(()=>{el.style.width=w+'%';},50);
-  });
-}
+renderBars(WEEK_DATA,'bars-week');
+renderBars(MONTH_DATA,'bars-months');
 
-function animateCostBars(container){
-  container.querySelectorAll('.cbf[data-w]').forEach(el=>{
-    const w=parseInt(el.dataset.w)||0;
-    el.style.width='0%';
-    setTimeout(()=>{el.style.width=w+'%';},50);
-  });
-}
-
-const observed=new Set();
+const triggered=new Set();
 const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
-    if(e.isIntersecting&&!observed.has(e.target)){
-      observed.add(e.target);
-      e.target.classList.add('show');
-      if(e.target.id==='cnt-pct') animateCounter(e.target,62,'%',1200);
-      if(e.target.id==='cnt-hrs') animateCounter(e.target,209,'',1000);
-      const eq=e.target.closest('.equip-grid');
-      if(eq) animateEqBars(eq);
-      const bars=e.target.querySelector('#bars-week')||e.target.id==='view-week'&&e.target;
-      if(e.target.id==='view-week') animateBars(e.target);
-      const costList=e.target.classList.contains('cost-list');
-      if(costList) animateCostBars(e.target);
-    }
+    if(!e.isIntersecting||triggered.has(e.target))return;
+    triggered.add(e.target);
+    e.target.classList.add('show');
+    if(e.target.id==='cnt-pct') animateCounter(e.target,TOTAL_PCT,'%',1200);
+    if(e.target.id==='cnt-hrs') animateCounter(e.target,TOTAL_HRS,'',1000);
+    if(e.target.classList.contains('equip-grid')) animateEqBars();
+    if(e.target.id==='view-week') animateBars(e.target);
+    if(e.target.classList.contains('cost-list')) animateCostBars();
   });
-},{threshold:0.15});
+},{threshold:0.1});
 
-document.querySelectorAll('.reveal,[id="cnt-pct"],[id="cnt-hrs"]').forEach(el=>io.observe(el));
-
-const d=new Date();
-document.getElementById('nav-time').textContent='обновлено '+d.getDate()+'.'+(d.getMonth()+1<10?'0':'')+(d.getMonth()+1)+' · '+d.getHours()+':'+String(d.getMinutes()).padStart(2,'0');
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
