@@ -106,7 +106,7 @@ footer{background:#000;border-top:0.5px solid #141414;padding:32px 24px;display:
     <a href="#dynamics">График</a>
     <a href="#costs">Затраты</a>
   </div>
-  <div class="nav-live"><div class="live-dot"></div>17.08.26 · 06:00</div>
+  <div class="nav-live"><div class="live-dot"></div>17.08.26 · 15:46</div>
 </nav>
 
 <section class="hero">
@@ -126,7 +126,7 @@ footer{background:#000;border-top:0.5px solid #141414;padding:32px 24px;display:
     <div class="strip-label">выполнение плана</div>
   </div>
   <div class="strip-cell reveal delay1">
-    <div class="strip-num" style="color:#30d158;">6<span style="font-size:18px;color:rgba(255,255,255,.2);font-weight:400;"> / 23</span></div>
+    <div class="strip-num" style="color:#30d158;">7<span style="font-size:18px;color:rgba(255,255,255,.2);font-weight:400;"> / 23</span></div>
     <div class="strip-label">единиц · факт / план</div>
   </div>
   <div class="strip-cell reveal delay2">
@@ -158,9 +158,9 @@ footer{background:#000;border-top:0.5px solid #141414;padding:32px 24px;display:
     </div>
     <div class="eq-card">
       <div class="eq-name">Каток асфальтный 3 т</div>
-      <div class="eq-nums"><span class="eq-fact" style="color:#555;">0</span><span class="eq-plan">&nbsp;/ 1 ед.</span></div>
-      <div class="eq-bar"><div class="eq-fill" data-w="0" style="background:#555;"></div></div>
-      <div class="eq-pct" style="color:#555;">0% плана</div>
+      <div class="eq-nums"><span class="eq-fact" style="color:#30d158;">1</span><span class="eq-plan">&nbsp;/ 1 ед.</span></div>
+      <div class="eq-bar"><div class="eq-fill" data-w="100" style="background:#30d158;"></div></div>
+      <div class="eq-pct" style="color:#30d158;">100% плана</div>
     </div></div>
 </section>
 
@@ -206,10 +206,10 @@ footer{background:#000;border-top:0.5px solid #141414;padding:32px 24px;display:
 </footer>
 
 <script>
-const WEEK_DATA=[{"day": "пн", "date": "17.08", "plan": 23.0, "fact": 6.0}, {"day": "вт", "date": "18.08", "plan": 77.0, "fact": 0.0}, {"day": "ср", "date": "19.08", "plan": 77.0, "fact": 0.0}, {"day": "чт", "date": "20.08", "plan": 77.0, "fact": 0.0}, {"day": "пт", "date": "21.08", "plan": 77.0, "fact": 0.0}, {"day": "сб", "date": "22.08", "plan": 77.0, "fact": 0.0}, {"day": "вс", "date": "23.08", "plan": 77.0, "fact": 0.0}];
-const MONTH_DATA=[{"label": "апр", "plan": 10.0, "fact": 9.0}, {"label": "май", "plan": 179.0, "fact": 126.0}, {"label": "июн", "plan": 439.0, "fact": 338.0}, {"label": "июл", "plan": 942.0, "fact": 501.0}, {"label": "авг", "plan": 1538.0, "fact": 433.0}];
-const TOTAL_PCT=26;
-const TOTAL_HRS=0;
+const WEEK_DATA=[{"day": "пн", "date": "17.08", "plan": 23.0, "fact": 7.0}, {"day": "вт", "date": "18.08", "plan": 77.0, "fact": 0.0}, {"day": "ср", "date": "19.08", "plan": 77.0, "fact": 0.0}, {"day": "чт", "date": "20.08", "plan": 77.0, "fact": 0.0}, {"day": "пт", "date": "21.08", "plan": 77.0, "fact": 0.0}, {"day": "сб", "date": "22.08", "plan": 77.0, "fact": 0.0}, {"day": "вс", "date": "23.08", "plan": 77.0, "fact": 0.0}];
+const MONTH_DATA=[{"label": "апр", "plan": 10.0, "fact": 9.0}, {"label": "май", "plan": 179.0, "fact": 126.0}, {"label": "июн", "plan": 439.0, "fact": 338.0}, {"label": "июл", "plan": 942.0, "fact": 501.0}, {"label": "авг", "plan": 1538.0, "fact": 434.0}];
+const TOTAL_PCT=30;
+const TOTAL_HRS=83;
 
 function col(f,p){if(!f||!p)return null;const r=f/p*100;return r>=90?'#30d158':r>=70?'#ffd60a':'#ff453a';}
 
